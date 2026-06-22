@@ -1,0 +1,196 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      nav: {
+        menu: 'Menu',
+        cart: 'Cart',
+        orders: 'Orders',
+        admin: 'Admin',
+      },
+      menu: {
+        ourMenu: 'Our Menu',
+        appetizers: 'Appetizers',
+        mainCourses: 'Main Courses',
+        drinks: 'Drinks',
+        desserts: 'Desserts',
+        addToCart: 'Add to Cart',
+        added: 'Added!',
+      },
+      cart: {
+        yourCart: 'Your Cart',
+        empty: 'Your cart is empty',
+        total: 'Total',
+        checkout: 'Checkout',
+        remove: 'Remove',
+        quantity: 'Qty',
+        subtotal: 'Subtotal',
+        continueShopping: 'Continue Shopping',
+      },
+      checkout: {
+        title: 'Checkout',
+        name: 'Full Name',
+        phone: 'Phone Number',
+        address: 'Delivery Address',
+        notes: 'Order Notes',
+        placeOrder: 'Place Order',
+        processing: 'Processing...',
+        orderSuccess: 'Order Placed Successfully!',
+        orderNumber: 'Order Number',
+        backToMenu: 'Back to Menu',
+        payNow: 'Pay Now',
+      },
+      orders: {
+        yourOrders: 'Your Orders',
+        noOrders: 'No orders yet',
+        status: {
+          pending: 'Pending',
+          confirmed: 'Confirmed',
+          preparing: 'Preparing',
+          ready: 'Ready',
+          delivered: 'Delivered',
+        },
+        orderTotal: 'Order Total',
+        orderDate: 'Order Date',
+      },
+      common: {
+        currency: '$',
+        loading: 'Loading...',
+        error: 'Something went wrong',
+      },
+    },
+  },
+  es: {
+    translation: {
+      nav: {
+        menu: 'Menú',
+        cart: 'Carrito',
+        orders: 'Pedidos',
+        admin: 'Admin',
+      },
+      menu: {
+        ourMenu: 'Nuestro Menú',
+        appetizers: 'Entrantes',
+        mainCourses: 'Platos Principales',
+        drinks: 'Bebidas',
+        desserts: 'Postres',
+        addToCart: 'Añadir al Carrito',
+        added: '¡Añadido!',
+      },
+      cart: {
+        yourCart: 'Tu Carrito',
+        empty: 'Tu carrito está vacío',
+        total: 'Total',
+        checkout: 'Pagar',
+        remove: 'Eliminar',
+        quantity: 'Cant',
+        subtotal: 'Subtotal',
+        continueShopping: 'Seguir Comprando',
+      },
+      checkout: {
+        title: 'Pagar',
+        name: 'Nombre Completo',
+        phone: 'Teléfono',
+        address: 'Dirección de Entrega',
+        notes: 'Notas del Pedido',
+        placeOrder: 'Realizar Pedido',
+        processing: 'Procesando...',
+        orderSuccess: '¡Pedido Realizado con Éxito!',
+        orderNumber: 'Número de Pedido',
+        backToMenu: 'Volver al Menú',
+        payNow: 'Pagar Ahora',
+      },
+      orders: {
+        yourOrders: 'Tus Pedidos',
+        noOrders: 'Sin pedidos aún',
+        status: {
+          pending: 'Pendiente',
+          confirmed: 'Confirmado',
+          preparing: 'Preparando',
+          ready: 'Listo',
+          delivered: 'Entregado',
+        },
+        orderTotal: 'Total del Pedido',
+        orderDate: 'Fecha del Pedido',
+      },
+      common: {
+        currency: '$',
+        loading: 'Cargando...',
+        error: 'Algo salió mal',
+      },
+    },
+  },
+  zh: {
+    translation: {
+      nav: {
+        menu: '菜单',
+        cart: '购物车',
+        orders: '订单',
+        admin: '管理',
+      },
+      menu: {
+        ourMenu: '我们的菜单',
+        appetizers: '开胃菜',
+        mainCourses: '主菜',
+        drinks: '饮品',
+        desserts: '甜点',
+        addToCart: '加入购物车',
+        added: '已添加！',
+      },
+      cart: {
+        yourCart: '您的购物车',
+        empty: '购物车为空',
+        total: '总计',
+        checkout: '结算',
+        remove: '移除',
+        quantity: '数量',
+        subtotal: '小计',
+        continueShopping: '继续购物',
+      },
+      checkout: {
+        title: '结算',
+        name: '姓名',
+        phone: '电话',
+        address: '配送地址',
+        notes: '订单备注',
+        placeOrder: '提交订单',
+        processing: '处理中...',
+        orderSuccess: '下单成功！',
+        orderNumber: '订单号',
+        backToMenu: '返回菜单',
+        payNow: '立即支付',
+      },
+      orders: {
+        yourOrders: '您的订单',
+        noOrders: '暂无订单',
+        status: {
+          pending: '待确认',
+          confirmed: '已确认',
+          preparing: '准备中',
+          ready: '已完成',
+          delivered: '已送达',
+        },
+        orderTotal: '订单总额',
+        orderDate: '下单时间',
+      },
+      common: {
+        currency: '¥',
+        loading: '加载中...',
+        error: '出错了',
+      },
+    },
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'en',
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n;
